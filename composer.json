@@ -1,0 +1,30 @@
+{
+  "name": "kevinem/adobesign",
+  "description": "AdobeSign PHP Client",
+  "require": {
+    "php": ">=5.5.0",
+    "kevinem/oauth2-adobesign": "^0.1.3",
+    "mikey179/vfsStream": "^1.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.4",
+    "mockery/mockery": "^0.9.5"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kevin Em",
+      "email": "kevinem@thinkdevise.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "KevinEm\\AdobeSign\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "KevinEm\\AdobeSign\\Tests\\": "tests/"
+    }
+  }
+}
