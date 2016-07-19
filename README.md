@@ -2,10 +2,8 @@
 
 https://acrobat.adobe.com/us/en/sign.html
 
-This package provides Adobe Sign OAuth 2.0 support for The PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
-
-[![Latest Stable Version](https://poser.pugx.org/kevinem/oauth2-adobesign/v/stable?format=flat-square)](https://packagist.org/packages/kevinem/oauth2-adobesign)
-[![License](https://poser.pugx.org/kevinem/oauth2-adobesign/license?format=flat-square)](https://packagist.org/packages/kevinem/oauth2-adobesign)
+[![Latest Stable Version](https://poser.pugx.org/kevinem/adobe-sign-php/v/stable?format=flat-square)](https://packagist.org/packages/kevinem/adobe-sign-php)
+[![License](https://poser.pugx.org/kevinem/adobe-sign-php/license?format=flat-square)](https://packagist.org/packages/kevinem/adobe-sign-php)
 
 ## Installation
 
