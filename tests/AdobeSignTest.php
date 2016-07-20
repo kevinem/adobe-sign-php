@@ -72,6 +72,18 @@ class AdobeSignTest extends BaseTestCase
         $this->adobeSign->getBaseUris();
     }
 
+    public function testAdobeSignException()
+    {
+        $this->expectException('KevinEm\AdobeSign\Exceptions\AdobeSignException');
+
+        $this->provider->shouldReceive('getAuthenticatedRequest')->andReturn($this->request);
+        $this->provider->shouldReceive('getResponse')->andReturn([
+            'code'    => 'mock_code',
+            'message' => 'mock_message'
+        ]);
+        $this->adobeSign->getBaseUris();
+    }
+
     public function testGetBaseUris()
     {
         $this->provider->shouldReceive('getAuthenticatedRequest')->andReturn($this->request);
@@ -80,4 +92,19 @@ class AdobeSignTest extends BaseTestCase
         $this->assertEquals($res, ['base_uri' => 'response']);
     }
 
+    public function testRefreshAccessToken()
+    {
+        $accessToken = [
+            'access_token' => 'mock_access_token'
+        ];
+
+        $this->provider->shouldReceive('getAccessToken')->andReturn($accessToken);
+        $token = $this->adobeSign->refreshAccessToken('mock_refresh_token');
+        $this->assertEquals($token, $accessToken);
+    }
+
+    public function testSetAccessToken()
+    {
+        $this->adobeSign->setAccessToken('mock_access_token');
+    }
 }

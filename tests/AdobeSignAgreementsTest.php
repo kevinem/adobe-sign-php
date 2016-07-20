@@ -39,6 +39,12 @@ class AdobeSignAgreementsTest extends BaseTestCase
         $this->assertEquals($res, ['mock_response' => 'mock_response']);
     }
 
+    public function testGetAgreement()
+    {
+        $res = $this->adobeSign->getAgreement('mock_agreement_id');
+        $this->assertEquals($res, ['mock_response' => 'mock_response']);
+    }
+
     public function testGetAgreementAuditTrail()
     {
         $res = $this->adobeSign->getAgreementAuditTrail('mock_agreement_id');
@@ -119,7 +125,7 @@ class AdobeSignAgreementsTest extends BaseTestCase
 
     public function testDeleteAgreementDocuments()
     {
-        $res = $this->adobeSign->deleteAgreement('mock_agreement_id');
+        $res = $this->adobeSign->deleteAgreementDocuments('mock_agreement_id');
         $this->assertEquals($res, ['mock_response' => 'mock_response']);
     }
 }

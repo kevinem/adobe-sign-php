@@ -10,10 +10,19 @@ use PHPUnit\Framework\TestCase;
 
 abstract class BaseTestCase extends TestCase
 {
+    /**
+     * @var AdobeSign
+     */
     protected $adobeSign;
 
+    /**
+     * @var m\MockInterface
+     */
     protected $provider;
 
+    /**
+     * @var m\MockInterface
+     */
     protected $request;
 
     /**

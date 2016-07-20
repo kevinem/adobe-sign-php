@@ -50,6 +50,12 @@ class AdobeSignLibraryDocumentsTest extends BaseTestCase
 
     public function testGetLibraryDocumentDocuments()
     {
+        $res = $this->adobeSign->getLibraryDocumentDocuments('mock_library_document_id');
+        $this->assertEquals($res, ['mock_response' => 'mock_response']);
+    }
+
+    public function testGetLibraryDocumentDocument()
+    {
         $res = $this->adobeSign->getLibraryDocumentDocument('mock_library_document_id', 'mock_document_id');
         $this->assertEquals($res, ['mock_response' => 'mock_response']);
     }
