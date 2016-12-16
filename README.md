@@ -72,7 +72,29 @@ if (!isset($_GET['code'])) {
 }
 ```
 
-## License 
+### Generate Multipart Stream for transient document upload
+
+Thanks to @trip-somers for the [solution](https://github.com/kevinem/adobe-sign-php/issues/1).
+
+```php
+$file_path = '/path/to/local/document';
+
+$file_stream = Psr7\FnStream::decorate(Psr7\stream_for(file_get_contents($file_path)), [
+    'getMetadata' => function() use ($file_path) {
+        return $file_path;
+    }
+]);
+
+$multipart_stream   = new Psr7\MultipartStream([
+    [
+        'name'     => 'File',
+        'contents' => $file_stream
+    ]
+]);
+
+$transient_document = $adobeSign->uploadTransientDocument($multipart_stream);
+```
+## License
 
 The MIT License (MIT)
 Copyright (c) 2016 Kevin Em
