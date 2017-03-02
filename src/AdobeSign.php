@@ -74,6 +74,11 @@ class AdobeSign
     {
         $this->accessToken = $accessToken;
     }
+    
+    public function setBaseUri($baseUri) 
+    { 
+        $this->baseUri = $baseUri; 
+    }
 
     protected function parseResponse($res)
     {
