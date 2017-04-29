@@ -863,7 +863,7 @@ class AdobeSign
     public function getAgreementAssetsViewUrl(array $agreementAssetRequest, array $headers = [])
     {
         $request = $this->provider->getAuthenticatedRequest(
-            'GET',
+            'POST',
             "$this->baseUri/$this->version/views/agreementAssets",
             $this->accessToken, [
                 'headers' => array_merge([
@@ -881,7 +881,7 @@ class AdobeSign
     public function getAgreementAssetListViewUrl(array $agreementAssetListRequest, array $headers = [])
     {
         $request = $this->provider->getAuthenticatedRequest(
-            'GET',
+            'POST',
             "$this->baseUri/$this->version/views/agreementAssetList",
             $this->accessToken, [
                 'headers' => array_merge([
@@ -899,7 +899,7 @@ class AdobeSign
     public function getSettingsViewUrl(array $targetViewRequest, array $headers = [])
     {
         $request = $this->provider->getAuthenticatedRequest(
-            'GET',
+            'POST',
             "$this->baseUri/$this->version/views/settings",
             $this->accessToken, [
                 'headers' => array_merge([
