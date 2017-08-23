@@ -73,6 +73,13 @@ class AdobeSign
     public function setAccessToken($accessToken)
     {
         $this->accessToken = $accessToken;
+        return $this;
+    }
+
+    public function setVersion($version)
+    {
+        $this->version = $version;
+        return $this;
     }
 
     protected function parseResponse($res)
@@ -109,6 +116,12 @@ class AdobeSign
         return $this->parseResponse($res);
     }
 
+    public function setBaseUri($baseUri)
+    {
+        $this->baseUri = $baseUri;
+        return $this;
+    }
+
     /*
      * TransientDocuments
      */
@@ -120,7 +133,7 @@ class AdobeSign
             "$this->baseUri/$this->version/transientDocuments",
             $this->accessToken, [
                 'headers' => $headers,
-                'body'    => $multipartStream
+                'body' => $multipartStream
             ]
         );
 
@@ -142,7 +155,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($agreementCreationInfo)
+                'body' => json_encode($agreementCreationInfo)
             ]
         );
 
@@ -157,13 +170,14 @@ class AdobeSign
         $participantId,
         array $alternateParticipantInfo,
         array $headers = []
-    ) {
+    )
+    {
         $request = $this->provider->getAuthenticatedRequest(
             'POST',
             "$this->baseUri/$this->version/agreements/$agreementId/participantSets/$participantSetId/participants/$participantId/alternateParticipants",
             $this->accessToken, [
                 'headers' => $headers,
-                'body'    => $alternateParticipantInfo
+                'body' => $alternateParticipantInfo
             ]
         );
 
@@ -392,7 +406,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($agreementStatusUpdateInfo)
+                'body' => json_encode($agreementStatusUpdateInfo)
             ]
         );
 
@@ -444,7 +458,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($reminderCreationInfo)
+                'body' => json_encode($reminderCreationInfo)
             ]
         );
 
@@ -466,7 +480,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($userCreationInfo)
+                'body' => json_encode($userCreationInfo)
             ]
         );
 
@@ -520,7 +534,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($userModificationInfo)
+                'body' => json_encode($userModificationInfo)
             ]
         );
 
@@ -538,7 +552,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($userStatusUpdateInfo)
+                'body' => json_encode($userStatusUpdateInfo)
             ]
         );
 
@@ -560,7 +574,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($libraryCreationInfo)
+                'body' => json_encode($libraryCreationInfo)
             ]
         );
 
@@ -687,7 +701,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($widgetCreationRequest)
+                'body' => json_encode($widgetCreationRequest)
             ]
         );
 
@@ -829,7 +843,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($widgetPersonalizationInfo)
+                'body' => json_encode($widgetPersonalizationInfo)
             ]
         );
 
@@ -847,7 +861,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($widgetStatusUpdateInfo)
+                'body' => json_encode($widgetStatusUpdateInfo)
             ]
         );
 
@@ -869,7 +883,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($agreementAssetRequest)
+                'body' => json_encode($agreementAssetRequest)
             ]
         );
 
@@ -887,7 +901,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($agreementAssetListRequest)
+                'body' => json_encode($agreementAssetListRequest)
             ]
         );
 
@@ -905,7 +919,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($targetViewRequest)
+                'body' => json_encode($targetViewRequest)
             ]
         );
 
@@ -927,7 +941,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($agreementAssetEventRequest)
+                'body' => json_encode($agreementAssetEventRequest)
             ]
         );
 
@@ -961,7 +975,8 @@ class AdobeSign
         $workflowId,
         array $customWorkflowAgreementCreationRequest,
         array $headers = []
-    ) {
+    )
+    {
         $request = $this->provider->getAuthenticatedRequest(
             'POST',
             "$this->baseUri/$this->version/workflows/$workflowId/agreements",
@@ -969,7 +984,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($customWorkflowAgreementCreationRequest)
+                'body' => json_encode($customWorkflowAgreementCreationRequest)
             ]
         );
 
@@ -1023,7 +1038,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($groupCreationInfo)
+                'body' => json_encode($groupCreationInfo)
             ]
         );
 
@@ -1086,7 +1101,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($groupModificationInfo)
+                'body' => json_encode($groupModificationInfo)
             ]
         );
 
@@ -1123,7 +1138,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($megaSignCreationRequest)
+                'body' => json_encode($megaSignCreationRequest)
             ]
         );
 
@@ -1203,7 +1218,7 @@ class AdobeSign
                 'headers' => array_merge([
                     'Content-Type' => 'application/json'
                 ], $headers),
-                'body'    => json_encode($megaSignStatusUpdateInfo)
+                'body' => json_encode($megaSignStatusUpdateInfo)
             ]
         );
 
