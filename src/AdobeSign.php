@@ -27,7 +27,7 @@ class AdobeSign
     /**
      * @var string
      */
-    protected $version = 'v5';
+    protected $version = 'v6';
 
     /**
      * @var \KevinEm\OAuth2\Client\AdobeSign
@@ -46,6 +46,10 @@ class AdobeSign
     public function __construct(AbstractProvider $provider)
     {
         $this->provider = $provider;
+		
+		//Override the prefix, depending on region set
+		$shard = explode('.', $provider->getDataCenter())[1];
+		$this->baseUrl = str_replace(['eu1', 'na1'], $shard, $this->baseUri);
     }
 
     public function getAuthorizationUrl()
@@ -107,7 +111,7 @@ class AdobeSign
     {
         $request = $this->provider->getAuthenticatedRequest(
             'GET',
-            "$this->baseUri/$this->version/base_uris",
+            "$this->baseUri/$this->version/baseUris",
             $this->accessToken
         );
 
