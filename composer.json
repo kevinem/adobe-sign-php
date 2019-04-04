@@ -3,7 +3,7 @@
   "description": "Adobe Sign PHP Client",
   "require": {
     "php": ">=5.6.0",
-    "kevinem/oauth2-adobe-sign": "^0.1.5"
+    "edmunds22/oauth2-adobe-sign": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.4",
@@ -26,5 +26,12 @@
     "psr-4": {
       "KevinEm\\AdobeSign\\Tests\\": "tests/"
     }
-  }
+  },
+  "repositories": [
+
+        {
+            "type": "vcs",
+            "url": "https://github.com/edmunds22/oauth2-adobe-sign"
+        }
+    ]
 }

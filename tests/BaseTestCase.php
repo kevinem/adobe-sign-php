@@ -41,7 +41,7 @@ abstract class BaseTestCase extends TestCase
         $this->adobeSign->setAccessToken('mock_access_token')->setBaseUri('mock_uri');
         $this->provider->shouldReceive('getAuthenticatedRequest')->with(
             'GET',
-            "mock_uri/v5/base_uris",
+            "mock_uri/v6/baseUris",
             'mock_access_token'
         )->andReturn($this->request);
         $this->provider->shouldReceive('getResponse')->with($this->request);
@@ -53,7 +53,7 @@ abstract class BaseTestCase extends TestCase
         $this->adobeSign->setAccessToken('mock_access_token')->setVersion('mock_version');
         $this->provider->shouldReceive('getAuthenticatedRequest')->with(
             'GET',
-            "https://api.na1.echosign.com/api/rest/mock_version/base_uris",
+            "https://api.na1.echosign.com/api/rest/mock_version/baseUris",
             'mock_access_token'
         )->andReturn($this->request);
         $this->provider->shouldReceive('getResponse')->with($this->request);
