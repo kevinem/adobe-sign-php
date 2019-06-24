@@ -13,12 +13,12 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Kevin Em",
-      "email": "kevinem@thinkdevise.com"
-    },
-    {
       "name": "William Edmunds",
       "email": "will@wpedmunds.uk"
+    },
+    {
+      "name": "Kevin Em",
+      "email": "kevinem@thinkdevise.com"
     }
   ],
   "autoload": {
