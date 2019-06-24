@@ -11,12 +11,12 @@ https://acrobat.adobe.com/us/en/sign.html
 To install, use composer:
 
 ```
-composer require kevinem/adobe-sign-php
+composer require edmunds22/adobe-sign-php
 ```
 
 ## Documentation
 
-https://secure.na1.echosign.com/public/docs/restapi/v5
+https://secure.na1.echosign.com/public/docs/restapi/v6
 
 ### Example Usage
 
