@@ -47,8 +47,8 @@ class AdobeSign
     {
         $this->provider = $provider;
 		
-		$shard = explode('.', $this->provider->dataCenter)[1];
-		$this->baseUrl = str_replace(['eu1', 'na1'], $shard, $this->baseUri);
+	$shard = explode('.', $this->provider->dataCenter)[1];
+	self::setBaseUri(str_replace(['eu1', 'na1'], $shard, $this->baseUri));
     }
 
     public function getAuthorizationUrl()
