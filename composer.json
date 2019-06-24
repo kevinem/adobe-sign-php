@@ -23,12 +23,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "KevinEm\\AdobeSign\\": "src/"
+      "edmunds22\\AdobeSign\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "KevinEm\\AdobeSign\\Tests\\": "tests/"
+      "edmunds22\\AdobeSign\\Tests\\": "tests/"
     }
   },
   "repositories": [
