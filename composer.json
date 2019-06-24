@@ -1,5 +1,5 @@
 {
-  "name": "kevinem/adobe-sign-php",
+  "name": "edmunds22/adobe-sign-php",
   "description": "Adobe Sign PHP Client",
   "require": {
     "php": ">=5.6.0",
@@ -15,6 +15,10 @@
     {
       "name": "Kevin Em",
       "email": "kevinem@thinkdevise.com"
+    },
+    {
+      "name": "William Edmunds",
+      "email": "will@wpedmunds.uk"
     }
   ],
   "autoload": {
