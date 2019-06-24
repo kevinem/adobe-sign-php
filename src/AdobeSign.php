@@ -1,13 +1,13 @@
 <?php
 
 
-namespace KevinEm\AdobeSign;
+namespace edmunds22\AdobeSign;
 
 use GuzzleHttp\Psr7\MultipartStream;
-use KevinEm\AdobeSign\Exceptions\AdobeSignException;
-use KevinEm\AdobeSign\Exceptions\AdobeSignInvalidAccessTokenException;
-use KevinEm\AdobeSign\Exceptions\AdobeSignMissingRequiredParamException;
-use KevinEm\AdobeSign\Exceptions\AdobeSignUnsupportedMediaTypeException;
+use edmunds22\AdobeSign\Exceptions\AdobeSignException;
+use edmunds22\AdobeSign\Exceptions\AdobeSignInvalidAccessTokenException;
+use edmunds22\AdobeSign\Exceptions\AdobeSignMissingRequiredParamException;
+use edmunds22\AdobeSign\Exceptions\AdobeSignUnsupportedMediaTypeException;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Tool\QueryBuilderTrait;
 
