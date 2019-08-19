@@ -22,7 +22,7 @@ class AdobeSign
     /**
      * @var string
      */
-    protected $baseUri = 'https://api.na1.echosign.com/api/rest';
+    protected $baseUri = 'https://api.na1.adobesign.com/api/rest';
 
     /**
      * @var string
